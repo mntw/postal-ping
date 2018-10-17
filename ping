@@ -1,0 +1,30 @@
+#!/usr/bin/python
+#-*- coding: utf-8 -*-
+from time import sleep
+from signal import signal, SIGINT
+from sys import exit, argv
+
+
+ping_msg = 'Мужчина, вы что не видете, что у нас обед.'
+preamble = 'PING %s (95.128.183.41): 56 data bytes'
+termination = '--- %s ping statistics ---\n\
+%d packets transmitted, 0 received, 100.0%% obed\n'
+count = 0
+
+
+try:
+    dns = argv[1]
+except:
+    dns = 'pochta.ru'
+
+print(preamble % dns)
+def signal_handler(signal, frame):
+    print termination % (dns, count) 
+    exit(0)
+
+signal(SIGINT, signal_handler) # catch SIGIN with signal_handler
+
+while True:
+    print(ping_msg)
+    count += 1
+    sleep(1)
