@@ -2,5 +2,5 @@
 When you trying to reach the pochta.
 
 <p align="center">
-    <img src="https://github.com/mntw/postal-ping/blob/master/demo.svg">
+    <img src=https://mntw.github.io/postal-ping/demo.svg">
 </p>
