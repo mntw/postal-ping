@@ -1,3 +1,3 @@
 <p align="center">
-    <img src="./demo.svg">
+    <img src="https://github.com/mntw/postal-ping/blob/master/demo.svg">
 </p>
