@@ -6,9 +6,9 @@ from sys import exit, argv
 
 
 ping_msg = 'Мужчина, вы что не видете, что у нас обед.'
-preamble = 'PING %s (95.128.183.41): 56 data bytes'
-termination = '--- %s ping statistics ---\n\
-%d packets transmitted, 0 received, 100.0%% obed\n'
+preamble = 'PING {dns} (95.128.183.41): 56 data bytes'
+termination = '--- {dns} ping statistics ---\n\
+{count} packets transmitted, 0 received, 100.0%% obed\n'
 count = 0
 
 
@@ -17,9 +17,10 @@ try:
 except:
     dns = 'pochta.ru'
 
-print(preamble % dns)
+print(preamble.format(dns = dns))
+
 def signal_handler(signal, frame):
-    print termination % (dns, count) 
+    print(termination.format(dns=dns, count=count))
     exit(0)
 
 signal(SIGINT, signal_handler) # catch SIGIN with signal_handler
