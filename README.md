@@ -1,6 +1,6 @@
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-# Ping 
+# Ping   
 When you're trying to reach the pochta.
 
 <p align="center">
